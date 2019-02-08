@@ -2,20 +2,14 @@
 <html>
 
 <head>
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link data-require="bootstrap-css@*" data-semver="3.2.0" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
     <script data-require="jquery@*" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script data-require="bootstrap@*" data-semver="3.2.0" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
-
     <link rel="stylesheet" href="assets/css/main.css" />
-  
 </head>
 
 <body>
-
-    <br><br>
-
     <div class="container">
         <div class="row">
             <table class="table">
@@ -33,10 +27,10 @@
                         <td></td>
                         <td></td>
                         <td>
-                            <button type="button" class="btn btn-primary pop" data-container="body" data-toggle="popover" data-placement="right" 
-                            data-content="<a class='create' href='#' data-toggle='modal' data-target='#create_chapt'><i class='fa fa-plus-circle'></i> Create</a><br>
+                            <button type="button" class="btn btn-primary pop" data-container="body" data-toggle="popover"
+                                data-placement="right" data-content="<a class='create' href='#' data-toggle='modal' data-target='#create_chapt'><i class='fa fa-plus-circle'></i> Create</a><br>
                                             <a class='edit' href='#' data-toggle='modal' data-target='#edit_chapt'><i class='fa fa-edit'></i> Modify</a>"
-                            data-original-title="" title="" title="Add Chapter Item">
+                                data-original-title="" title="Add Chapter Item">
                                 <i class="fa fa-book"></i>
                             </button>
                         </td>
@@ -44,104 +38,45 @@
                 </tbody>
             </table>
         </div>
-    </div>
-
-    <!-- Create Chapter Modal -->
-    <div class="modal fade" id="create_chapt" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLabel1">Create Chapter(s)</h4>
-                    <button type="button" id="new_chapter" class="btn btn-primary">
-                        <i class="fa fa-plus"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div id="chapters">
-                        <div hidden>
-                            <i class="fa fa-trash-o"></i>
-                            <button class="collapsible"> New Chapter </button>
-                            <div class="content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <!-- Create Chapter Modal -->
+        <div class="modal fade" id="create_chapt" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel1">Create Chapter(s)</h4>
+                        <button type="button" id="new_chapter" class="btn btn-primary">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="chapters">
+                            <div hidden>
+                                <i class="fa fa-trash-o"></i>
+                                <button class="collapsible"> New Chapter </button>
+                                <div class="content">
+                                    <!-- content goes here -->
+                                </div>
                             </div>
                         </div>
-                    </div>    
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success">Create</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success">Create</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Edit Chapter Modal -->
-    <div class="modal fade" id="edit_chapt" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <!-- Edit Chapter Modal -->
+        <div class="modal fade" id="edit_chapt" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
+            aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title" id="exampleModalLabel2">Edit Chapter(s)</h4>
-                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button> -->
                     </div>
                     <div class="modal-body">
-                        <!-- <div id="edit_chapters">
-                            <div class="chapter">
-                                <i class="fa fa-trash-o" style="color:transparent"></i>
-                                <button class="collapsible"> Chapter Name </button>
-                                <div class="content">
-                                    <div class="form-group"><br>
-                                        '<input type="text" class="form-control" placeholder="Enter Chapter Name" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="number" min="1" class="form-control" placeholder="Enter Chapter Volume" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="number" min="1" class="form-control" placeholder="Enter Chapter Sessions" required>
-                                    </div>
-                                    <div class="form-group" hidden>
-                                        <input type="text" class="form-control" value="" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chapter">
-                                <i class="fa fa-trash-o" style="color:transparent"></i>
-                                <button class="collapsible"> Chapter Name </button>
-                                <div class="content">
-                                    <div class="form-group"><br>
-                                        '<input type="text" class="form-control" placeholder="Enter Chapter Name" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="number" min="1" class="form-control" placeholder="Enter Chapter Volume" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="number" min="1" class="form-control" placeholder="Enter Chapter Sessions" required>
-                                    </div>
-                                    <div class="form-group" hidden>
-                                        <input type="text" class="form-control" value="" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chapter">
-                                <i class="fa fa-trash-o" style="color:transparent"></i>
-                                <button class="collapsible"> Chapter Name </button>
-                                <div class="content">
-                                    <div class="form-group"><br>
-                                        '<input type="text" class="form-control" placeholder="Enter Chapter Name" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="number" min="1" class="form-control" placeholder="Enter Chapter Volume" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="number" min="1" class="form-control" placeholder="Enter Chapter Sessions" required>
-                                    </div>
-                                    <div class="form-group" hidden>
-                                        <input type="text" class="form-control" value="" required>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
+                        <!-- body content goes here -->
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-success">Edit</button>
@@ -150,7 +85,7 @@
                 </div>
             </div>
         </div>
-
+    </div>
     <script src="assets/js/main.js"></script>
 </body>
 
